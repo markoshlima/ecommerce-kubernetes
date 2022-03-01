@@ -1,0 +1,12 @@
+[submodule "endereco-k8s"]
+	path = endereco-k8s
+	url = https://github.com/markoshlima/endereco-k8s
+[submodule "compra-k8s"]
+	path = compra-k8s
+	url = https://github.com/markoshlima/compra-k8s
+[submodule "facade-k8s"]
+	path = facade-k8s
+	url = https://github.com/markoshlima/facade-k8s
+[submodule "produto-k8s"]
+	path = produto-k8s
+	url = https://github.com/markoshlima/produto-k8s
