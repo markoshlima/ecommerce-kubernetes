@@ -10,3 +10,6 @@
 [submodule "produto-k8s"]
 	path = produto-k8s
 	url = https://github.com/markoshlima/produto-k8s
+[submodule "cliente-k8s"]
+	path = cliente-k8s
+	url = https://github.com/markoshlima/cliente-k8s
