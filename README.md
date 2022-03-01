@@ -18,7 +18,7 @@ Ecommerce Kubernetes consists in testing about AWS Elastic Container Service for
 
 In this scenario, was create four applications with especialized microservice information, such as customer, addresses, products and orders. There are two other microservice called facade, like a design patter facade, the objetive is to encapsulate the complexity about reading lots of especialized services into only one, or, in other ways, as we can see, there is a front end consuming this microservice, we can call back for front (BFF) too.
 All tags/images was uploaded inside Elastic Container Registry (ECR) and to reach into the services was created a application load balancer.
-The docker/kubernetes microservices was disposed in the following:
+The docker/kubernetes microservices was made available as follows:
 - cliente-k8s: `port:5000`
 - endereço-k8s: `port:5001`
 - produto-k8s: `port:5002`
