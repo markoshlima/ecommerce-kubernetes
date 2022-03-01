@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: compra-k8s-deployment
+  namespace: compra-k8s
+  labels:
+    app: compra-k8s-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: compra-k8s-app
+  template:
+    metadata:
+      labels:
+        app: compra-k8s-app
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+                - arm64
+      containers:
+      - name: compra-k8s 
+        image: [img-url]
+        ports:
+        - name: http
+          containerPort: 8080
+        imagePullPolicy: IfNotPresent
+      nodeSelector:
+        kubernetes.io/os: linux

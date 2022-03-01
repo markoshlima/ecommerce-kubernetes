@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: facade-k8s-service
+  namespace: facade-k8s
+  labels:
+    app: facade-k8s-app
+spec:
+  selector:
+    app: facade-k8s-app
+  ports:
+    - protocol: TCP
+      port: 5004
+      targetPort: 8080

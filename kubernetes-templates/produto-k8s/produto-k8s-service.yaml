@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: produto-k8s-service
+  namespace: produto-k8s
+  labels:
+    app: produto-k8s-app
+spec:
+  selector:
+    app: produto-k8s-app
+  ports:
+    - protocol: TCP
+      port: 5002
+      targetPort: 8080

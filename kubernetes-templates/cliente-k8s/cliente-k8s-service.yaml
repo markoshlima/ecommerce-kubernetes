@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cliente-k8s-service
+  namespace: cliente-k8s
+  labels:
+    app: cliente-k8s-app
+spec:
+  selector:
+    app: cliente-k8s-app
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 8080
