@@ -25,10 +25,17 @@ The docker/kubernetes microservices was made available as follows:
 - compra-k8s: `port:5003`
 - cliente-k8s: `port:5004`
 - facade-k8s: `port:5005`
+- front-k8s: `port:5006`
 
 ![alt text](https://raw.githubusercontent.com/markoshlima/ecommerce-kubernetes/master/docs/Solution%20Architecture.png)
 
 What it was observed, is Kubernetes can manager very well all containers and create a layer with a lot of features like balancer, addresses alias of microservice, high available, managing replicas of PODS and so on. And without counting the amount open services that is possible to integrate with kubernetes. It was observed too, that managing containers without an orchestrator, we can create a lot of points of failures and we lost all capabilities above mentioned.
+
+# Result
+
+As a result of all kubernetes configuration working with 6 PODs. It had the following frontend result. 
+
+![alt text](https://raw.githubusercontent.com/markoshlima/ecommerce-kubernetes/master/docs/front-output.png)
 
 # Addition Information & Setup
 
