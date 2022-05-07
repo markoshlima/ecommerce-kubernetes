@@ -13,3 +13,6 @@
 [submodule "cliente-k8s"]
 	path = cliente-k8s
 	url = https://github.com/markoshlima/cliente-k8s
+[submodule "front-k8s"]
+	path = front-k8s
+	url = https://github.com/markoshlima/front-k8s.git

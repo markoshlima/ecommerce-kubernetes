@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: endereco-k8s-service
-  namespace: endereco-k8s
   labels:
     app: endereco-k8s-app
 spec:
+  type: LoadBalancer
   selector:
     app: endereco-k8s-app
   ports:

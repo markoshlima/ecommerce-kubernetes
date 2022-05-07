@@ -2,13 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cliente-k8s-service
-  namespace: cliente-k8s
   labels:
     app: cliente-k8s-app
 spec:
+  type: LoadBalancer
   selector:
     app: cliente-k8s-app
   ports:
     - protocol: TCP
-      port: 5000
+      port: 5004
       targetPort: 8080

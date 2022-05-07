@@ -2,11 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: produto-k8s-deployment
-  namespace: produto-k8s
   labels:
     app: produto-k8s-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: produto-k8s-app
@@ -15,22 +14,9 @@ spec:
       labels:
         app: produto-k8s-app
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: kubernetes.io/arch
-                operator: In
-                values:
-                - amd64
-                - arm64
       containers:
       - name: produto-k8s 
-        image: [img-url]
+        image: markoshlima/produto-k8s:latest
+        imagePullPolicy: Never
         ports:
-        - name: http
-          containerPort: 8080
-        imagePullPolicy: IfNotPresent
-      nodeSelector:
-        kubernetes.io/os: linux
+        - containerPort: 8080
