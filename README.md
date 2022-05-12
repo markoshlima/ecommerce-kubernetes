@@ -3,6 +3,8 @@
 Ecommerce Kubernetes consists in testing about AWS Elastic Container Service for Kubernetes (EKS). It is about create some applications with different languages and communicate throught 'rest' procotol inside a Kubernetes network.
 
 # **Pre-requisites**
+- docker
+- minikube
 - kubectl
 - eksclt
 
