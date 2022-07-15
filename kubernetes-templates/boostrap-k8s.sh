@@ -36,7 +36,4 @@ minikube tunnel
 
 #expose outside from localhost
 #kubectl port-forward svc/istio-ingressgateway 15500:80 -n istio-system --address='0.0.0.0'
-
-#expose outside from localhost
-#istio dashboard kiali
 #kubectl port-forward svc/kiali 20002:20001 -n istio-system --address='0.0.0.0'
