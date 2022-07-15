@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: facade-k8s
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - ecommerce-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /cliente-geral
+      route:
+        - destination:
+            host: facade-k8s-service
+            port:
+              number: 5005
